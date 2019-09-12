@@ -5,6 +5,7 @@
 	 <!--[if lte IE 8]>
 	     <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
 	 <![endif]-->
+		<link rel="stylesheet" href="src/leaflet_awesome_number_markers.css" />
 	</head>
   <body>
 	
@@ -20,7 +21,8 @@
     <script type="text/javascript" src="common/tabletop.min.js"></script>
     <script type="text/javascript" src="common/handlebars.js"></script>
     <script src="https://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
-
+    <script type="text/javascript" src="src/leaflet_awesome_number_markers.js"></script>
+	  
     <script type="text/javascript" src="src/mapsheet.js"></script>
 
     <script id="popup-template" type="text/x-handlebars-template">
@@ -40,6 +42,9 @@
 											popupTemplate: "popup-template",
 											provider: Mapsheet.Providers.Leaflet,
 											markerOptions: {
+											icon: new L.AwesomeNumberMarkers({
+                     									number: {{walk_order}}, 
+                      									markerColor: {{hexcolor}},
 										    shadowSize:   [50, 64], // size of the shadow
 										    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
 										    shadowAnchor: [4, 62],  // the same for the shadow
