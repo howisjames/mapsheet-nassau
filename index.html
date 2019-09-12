@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+		<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
 	 <!--[if lte IE 8]>
-	     <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
+	     <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
 	 <![endif]-->
 	</head>
   <body>
@@ -22,7 +22,7 @@
 
     <script type="text/javascript" src="common/tabletop.js"></script>
     <script type="text/javascript" src="common/handlebars.js"></script>
-		<script src="http://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+		<script src="https://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
 
     <script type="text/javascript" src="../src/mapsheet.js"></script>
 
@@ -35,18 +35,16 @@
     <script type="text/javascript">
     	window.onload = function() { init() };
 
-      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1_cYil5oqOSr7XJzZ1-
-
-e9lW5iDz6dafqslEbZgKsMKR8/edit#gid=0';
-			
+      var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1_cYil5oqOSr7XJzZ1-e9lW5iDz6dafqslEbZgKsMKR8/edit#gid=0';
+	
       function init() {
         Mapsheet( { key: public_spreadsheet_url,
 											element: "map",
 											popupTemplate: "popup-template",
 											provider: Mapsheet.Providers.Leaflet,
 											markerOptions: {
-												iconUrl: 'http://leafletjs.com/docs/images/leaf-green.png',
-										    shadowUrl: 'http://leafletjs.com/docs/images/leaf-shadow.png',
+											iconUrl: 'https://leafletjs.com/docs/images/leaf-green.png',
+										   	shadowUrl: 'https://leafletjs.com/docs/images/leaf-shadow.png',
 
 										    shadowSize:   [50, 64], // size of the shadow
 										    iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
