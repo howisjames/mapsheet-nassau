@@ -432,12 +432,12 @@
 			
 			if(typeof(point.get('icon url')) !== 'undefined' && point.get('icon url') !== '') {
 				var options = merge_options( point.markerOptions, { iconUrl: point.get('icon url') } );
-				// var icon = L.icon(options);
-				var icon - L.AwesomeNumberMarkers(options);
+				var icon = L.icon(options);
+				// var icon - L.AwesomeNumberMarkers(options);
 				marker.setIcon(icon);
 			} else if(typeof(point.markerOptions['iconUrl']) !== 'undefined') {
-				// var icon = L.icon(point.markerOptions);
-				var icon = L.AwesomeNumberMarkers(point.markerOptions);
+				var icon = L.icon(point.markerOptions);
+				// var icon = L.AwesomeNumberMarkers(point.markerOptions);
 				marker.setIcon(icon);
 			}
 			
