@@ -390,7 +390,12 @@
 	
 		Did you know you can pass in your own map?
 		Check out https://gist.github.com/1804938 for some tips on using different tile providers
-
+	*/
+	
+	/*
+	
+	Leaflet Open Street Map
+	
 	*/
 	
 	Mapsheet.Providers.Leaflet = function(options) {
@@ -418,6 +423,38 @@
 		this.bounds = new L.LatLngBounds();
 	};
 
+	/*
+	
+	Leaflet HikeBike
+	
+	*/
+	
+	Mapsheet.Providers.HikeBike = function(options) {
+		this.map = options.map;
+		
+		var attribution = 'Map data &copy; <a href="https://www.openstreetmap.org">OSM Hike Bike</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>/>';
+		
+		var layerDefaults = {
+			styleId: 998,
+			attribution: attribution,
+			type: 'osm'
+		};
+
+		this.layerOptions = merge_options(layerDefaults, options.layerOptions || {});
+
+    if(!this.layerOptions.tilePath) {
+     	this.layerOptions.tilePath = 'https://tiles.wmflabs.org/hikebike/{z}/{x}/{y}.png';
+      this.layerOptions.subdomains = 'abc';
+      this.layerOptions.type = 'osm';
+	  this.layerOptions.maxZoom = '19';
+    }
+    this.markerLayer = options.markerLayer || new L.LayerGroup();
+		this.mapOptions = options.mapOptions || {};
+		this.bounds = new L.LatLngBounds();
+	};
+
+	
+	
 	Mapsheet.Providers.Leaflet.prototype = {
 		initialize: function(element) {
 			if(typeof(this.map) === 'undefined') {
