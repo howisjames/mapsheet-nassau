@@ -408,7 +408,7 @@
 
     // Only overwrite if there's no tilePath, because the default subdomains is 'abc'
     if(!this.layerOptions.tilePath) {
-      // this.layerOptions.tilePath = 'https://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.png';
+      // this.layerOptions.tilePath = 'https://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.png'; - obsolete URL
 	this.layerOptions.tilePath = 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png';
       this.layerOptions.subdomains = 'abc';
       this.layerOptions.type = 'osm';
@@ -432,10 +432,12 @@
 			
 			if(typeof(point.get('icon url')) !== 'undefined' && point.get('icon url') !== '') {
 				var options = merge_options( point.markerOptions, { iconUrl: point.get('icon url') } );
-				var icon = L.icon(options);
+				// var icon = L.icon(options);
+				var icon - L.AwesomeNumberMarkers(options);
 				marker.setIcon(icon);
 			} else if(typeof(point.markerOptions['iconUrl']) !== 'undefined') {
-				var icon = L.icon(point.markerOptions);
+				// var icon = L.icon(point.markerOptions);
+				var icon = L.AwesomeNumberMarkers(point.markerOptions);
 				marker.setIcon(icon);
 			}
 			
