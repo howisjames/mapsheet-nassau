@@ -408,8 +408,9 @@
 
     // Only overwrite if there's no tilePath, because the default subdomains is 'abc'
     if(!this.layerOptions.tilePath) {
-      this.layerOptions.tilePath = 'https://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.png';
-      this.layerOptions.subdomains = '1234';
+      // this.layerOptions.tilePath = 'https://otile{s}.mqcdn.com/tiles/1.0.0/{type}/{z}/{x}/{y}.png';
+	this.layerOptions.tilePath = 'https://otile{s}.openstreetmap.org/{z}/{x}/{y}.png';
+      this.layerOptions.subdomains = 'abc';
       this.layerOptions.type = 'osm';
     }
     this.markerLayer = options.markerLayer || new L.LayerGroup();
