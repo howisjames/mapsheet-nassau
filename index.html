@@ -19,15 +19,6 @@
 		-->
 
     <div id="map" style="height: 600px"></div>
-	  
-<style>
-	.number-icon
-{
-    background-image: url("src/images/mymarker.png");
-    text-align:center;
-    color:White;    
-}
-</style>
 
     <script type="text/javascript" src="common/tabletop.min.js"></script>
     <script type="text/javascript" src="common/handlebars.js"></script>
@@ -47,14 +38,6 @@
     	window.onload = function() { init() };
 
       var public_spreadsheet_url = 'https://docs.google.com/spreadsheets/d/1_cYil5oqOSr7XJzZ1-e9lW5iDz6dafqslEbZgKsMKR8/edit?usp=sharing';
-
-	var numberIcon = L.divIcon({
-  	    className: "number-icon",
- 	     // iconSize: [25, 41],
- 	     // iconAnchor: [10, 44],
- 	     // popupAnchor: [3, -40],
- 	     html: L.Order
-	});
  
 	    
       function init() {
@@ -68,7 +51,7 @@
 										  		iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
 											 	shadowAnchor: [4, 62],  // the same for the shadow
 										  		popupAnchor:  [-3, -76], // point from which the popup should open relative to the iconAnchor
-												html: numberIcon
+												html: 1
 											}
 									} );
       }
