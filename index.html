@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.4/leaflet.css" />
+		 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css"
+   integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ=="
+   crossorigin=""/>
 	 <!--[if lte IE 8]>
 	     <link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet-0.4/leaflet.ie.css" />
 	 <![endif]-->
@@ -16,13 +18,14 @@
 				markerOptions to set a ton of marker options
 		-->
 
-    <div id="map" style="height: 600px; width: 100%"></div>
+    <div id="map" style="height: 600px"></div>
 
     <script type="text/javascript" src="common/tabletop.min.js"></script>
     <script type="text/javascript" src="common/handlebars.js"></script>
-    <script src="https://cdn.leafletjs.com/leaflet-0.4.5/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"
+   integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og=="
+   crossorigin=""></script>
     <script src="dist/leaflet.awesome-markers.js"></script>
-	  
     <script type="text/javascript" src="src/mapsheet.js"></script>
 
     <script id="popup-template" type="text/x-handlebars-template">
